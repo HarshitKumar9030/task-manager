@@ -70,10 +70,10 @@ const Home: NextPage = () => {
             <Image src={'/images/logo-google.svg'} width={30} height={30} />
             <span className='text-base mt-0.5 font-bold tracking-wide text-gray-900 hover:text-black'>Sign in with Google</span>
           </button>
-          <button onClick={signInWithGoogle} className='px-4 py-2 mt-3 hover:bg-gray-800 text-white rounded-lg transition-all duration-300 bg-gray-700 flex space-x-2'>
+          {/* <button onClick={signInWithGoogle} className='px-4 py-2 mt-3 hover:bg-gray-800 text-white rounded-lg transition-all duration-300 bg-gray-700 flex space-x-2'>
             <Image src={'/images/logo-github-light.svg'} width={30} height={30} />
             <span className='text-base mt-0.5 font-bold tracking-wide'>Sign in with Github</span>
-          </button>
+          </button> */}
         </div>
       </div>
     </>

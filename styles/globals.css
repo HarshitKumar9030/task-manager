@@ -5,4 +5,5 @@
 *{
     --tap-highlight-color: transparent !important;
     -webkit-tap-highlight-color: transparent !important;
+    font-family: Inter,-apple-system , BlinkMacSystemFont;
 }
