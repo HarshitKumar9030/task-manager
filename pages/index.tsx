@@ -2,6 +2,7 @@ import { signInWithPopup } from 'firebase/auth'
 import { doc, getFirestore, getDoc, setDoc } from 'firebase/firestore'
 import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 import React from 'react'
 import { useContext, useEffect } from 'react'
 import { UserContext } from '../lib/context'
@@ -61,15 +62,15 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <div className="flex h-screen w-full items-center justify-center bg-[#111827]">
-        <main className="flex flex-col items-center justify-center">
-          <button
-            onClick={signInWithGoogle}
-            className="rounded-md border border-white px-4 py-2 text-white"
-          >
-            Sign in with google
+      <div className="mainScreen h-screen w-screen justify-center items-center flex flex-col bg-white">
+        <div className=' px-2 py-2'><Image src="/images/tm-logo.svg" height={75} width={75} /></div>
+        <div className="text text-center text-lg text-gray-900 font-medium container w-72 sm:w-80 md:w-96"><span className='font-bold'>TaskManager</span> is one of my side <span className='underline' onClick={()=> router.push('https://github.com/harshitkumar9030')}>projects</span>, And It is basically for not letting me get distract lol. And Yeah It is quite useful for me</div>
+        <div className="mt-2">
+          <button onClick={signInWithGoogle} className='px-4 py-2 hover:bg-blue-50 rounded-lg transition-all duration-300 bg-white flex space-x-2'>
+            <Image src={'/images/logo-google.svg'} width={30} height={30} />
+            <span className='text-base mt-0.5 font-bold tracking-wide text-gray-900 hover:text-black'>Sign in with Google</span>
           </button>
-        </main>
+        </div>
       </div>
     </>
   )

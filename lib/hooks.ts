@@ -15,7 +15,7 @@ export function useUserData() {
 
     if (user) {
       const ref = doc(getFirestore(), 'users', user.uid)
-      unsubscribe = onSnapshot(ref, (doc) => {console.log('doc', doc)})
+      unsubscribe = onSnapshot(ref, (doc) => {})
     }
 
     return unsubscribe
