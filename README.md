@@ -33,10 +33,9 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-# Built with Love   
+# Built with Love    
+[![](https://img.shields.io/badge/built%20with-love-blue.svg)](https://vercel.com/nextjs)
     
-    [![](https://img.shields.io/badge/built%20with-love-blue.svg)](https://vercel.com/nextjs)
-    
-    [![](https://img.shields.io/badge/version-next-yellow.svg)](
+[![](https://img.shields.io/badge/version-next-yellow.svg)](
 
-        
+
