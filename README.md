@@ -36,6 +36,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 # Built with Love    
 [![](https://img.shields.io/badge/built%20with-love-blue.svg)](https://vercel.com/nextjs)
     
-[![](https://img.shields.io/badge/version-next-yellow.svg)](
+[![](https://img.shields.io/badge/version-next-yellow.svg)](https://harshitkumar.tech)
 
 
