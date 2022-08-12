@@ -32,6 +32,10 @@ const account = () => {
         }
     }, [Show])
 
+    const [Dialog, setDialog] = useState(false)
+    const handleDialog = () => {
+        setDialog(!Dialog)
+    }
     return (
         <>
             <div className="main bg-blue-50 mt-0 h-screen w-full">
@@ -56,14 +60,25 @@ const account = () => {
                             </span>
                         </div>
                         <div className="profilePicture flex items-center md:text-xl text-lg">
-                            <img src={user?.photoURL} alt="profile" className="w-10 ml-2 h-10 rounded-lg" /> : Profile Picture 
+                            <img src={user?.photoURL} alt="profile" className="w-10 ml-2 h-10 rounded-lg" /> : Profile Picture
                         </div>
-                        <div className="upDate">
+                        <div onClick={handleDialog} className="upDate">
                             <button className='px-6 py-2 bg-gray-900 text-white hover:text-gray-50 hover:bg-gray-700 rounded-lg mt-4 ml-2 text-xl shadow-sm font-bold hover:shadow-gray-900/70 hover:-translate-y-1 duration-300 transition-all'>Update Information</button>
                         </div>
                     </div>
                 </div>
             </div>
+            {!Dialog && <div className='absolute w-full h-screen top-0 bg-white'>
+                <div className="flex justify-center text-black items-center fixed z-50 top-0 right-0"> 
+                    <svg onClick={handleDialog} xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-gray-900 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </div>
+                <div className='fixed z-10 bg-gray-200/70 hover:shadow-md hover:shadow-gray-400/70 transition-all duration-700 w-full rounded-b-xl top-0 h-[70%]'>
+                 
+                </div>
+                <div className="text-center md:text-xl sm:text-base absolute bottom-0 left-[40%] justify-center flex text-sm text-gray-800">UID: <span className="text-blue-500">{user?.uid}</span> </div>
+            </div>}
         </>
     )
 }
