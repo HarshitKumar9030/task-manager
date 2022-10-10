@@ -4,7 +4,7 @@ import { useContext, useEffect, useState } from 'react'
 import { UserContext } from '../lib/context'
 import { auth } from '../lib/firebase'
 
-const account = () => {
+const Account = () => {
     const router = useRouter()
     const { user, authLoading } = useContext(UserContext)
     useEffect(() => {
@@ -83,4 +83,4 @@ const account = () => {
     )
 }
 
-export default account
+export default Account
